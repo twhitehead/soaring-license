@@ -1,0 +1,23 @@
+digraph solo {
+  label = <<FONT POINT-SIZE="80">Dual to Solo<BR/></FONT><FONT POINT-SIZE="40">(private pilot license)<BR/><BR/></FONT>>
+  labelloc = t
+
+  ppl [label=<<FONT POINT-SIZE="20">PRIVATE PILOT LICENSE<BR/></FONT><FONT POINT-SIZE="4"><BR/></FONT>must be current>; fontname="Helvetica"; style="filled"; fontcolor="white"; fillcolor="/greys9/8"]
+  radio [label=<<FONT POINT-SIZE="20">RADIO CERTIFICATE<BR/></FONT><FONT POINT-SIZE="4"><BR/></FONT>valid for life>; fontname="Helvetica"; style="filled"; fontcolor="white"; fillcolor="/greys9/8"]
+  dual [label=<<FONT POINT-SIZE="20">DUAL INSTRUCTION<BR/></FONT><FONT POINT-SIZE="4"><BR/></FONT>by glider instructor>; fontname="Helvetica"; shape="octagon"; style="filled"; fontcolor="white"; fillcolor="/blues9/8"]
+
+  documents [label=<<FONT POINT-SIZE="20">FLYING DOCUMENTS<BR/></FONT><FONT POINT-SIZE="4"><BR/></FONT>must be on person while flying>; fontname="Helvetica"; style="filled"; fontcolor="white"; fillcolor="/greens9/8"]
+  conditions [label=<<FONT POINT-SIZE="20">CONDITIONS<BR/></FONT><FONT POINT-SIZE="4"><BR/></FONT>smooth day with low winds>; fontname="Helvetica"; style="filled"; fontcolor="white"; fillcolor="/blues9/8"]
+  experience [label=<<FONT POINT-SIZE="20">EXPERIENCE AND SKILL<BR/></FONT><FONT POINT-SIZE="4"><BR/></FONT>by glider instructor's approval>; fontname="Helvetica"; style="filled"; fontcolor="white"; fillcolor="/blues9/8"]
+
+  solo [label=<<FONT POINT-SIZE="30">SOLO<BR/></FONT><FONT POINT-SIZE="4"><BR/></FONT>under supervision of glider instructor>; fontname="Helvetica"; shape="octagon"; style="filled"; fontcolor="white"; fillcolor="/blues9/8"]
+
+  ppl -> documents
+  radio -> documents
+
+  dual -> experience
+
+  conditions -> solo
+  experience -> solo
+  documents -> solo
+}

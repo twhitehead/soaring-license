@@ -1,0 +1,47 @@
+digraph solo {
+  graph [nodesep = 0.1, ranksep = 0.2, rotate = 90, margin = 0]
+
+  medicalcheck [label=<<FONT POINT-SIZE="10">medical exam/self decleration</FONT>>; fontname="Helvetica"; shape="octagon"; style="filled"; fontcolor="white"; fillcolor="/reds9/8"]
+  presoloexam [label=<<FONT POINT-SIZE="10">pre-solo exam</FONT>>; fontname="Helvetica"; shape="octagon"; style="filled"; fontcolor="white"; fillcolor="/reds9/8"]
+
+  medical [label=<<FONT POINT-SIZE="10">medical certificate</FONT>>; fontname="Helvetica"; style="filled"; fontcolor="white"; fillcolor="/greens9/8"]
+  knowledge [label=<<FONT POINT-SIZE="10">knowledge</FONT>>; fontname="Helvetica"; style="filled"; fontcolor="white"; fillcolor="/greens9/8"]
+  age [label=<<FONT POINT-SIZE="10">age (14+)</FONT>>; fontname="Helvetica"; style="filled"; fontcolor="white"; fillcolor="/greys9/8"]
+  citizenship [label=<<FONT POINT-SIZE="10">citizenship</FONT>>; fontname="Helvetica"; style="filled"; fontcolor="white"; fillcolor="/greys9/8"]
+  identification [label=<<FONT POINT-SIZE="10">identification</FONT>>; fontname="Helvetica"; style="filled"; fontcolor="white"; fillcolor="/greys9/8"]
+
+  paperwork [label=<<FONT POINT-SIZE="10">paperwork</FONT>>; fontname="Helvetica"; shape="octagon"; style="filled"; fontcolor="white"; fillcolor="/reds9/8"]
+  radioexam [label=<<FONT POINT-SIZE="10">radio exam</FONT>>; fontname="Helvetica"; shape="octagon"; style="filled"; fontcolor="white"; fillcolor="/reds9/8"]
+
+  spp [label=<<FONT POINT-SIZE="10">student pilot permit</FONT>>; fontname="Helvetica"; style="filled"; fontcolor="white"; fillcolor="/greens9/8"]
+  radio [label=<<FONT POINT-SIZE="10">radio certificate</FONT>>; fontname="Helvetica"; style="filled"; fontcolor="white"; fillcolor="/greens9/8"]
+  dual [label=<<FONT POINT-SIZE="10">dual instruction</FONT>>; fontname="Helvetica"; shape="octagon"; style="filled"; fontcolor="white"; fillcolor="/blues9/8"]
+
+  documents [label=<<FONT POINT-SIZE="10">flying documents</FONT>>; fontname="Helvetica"; style="filled"; fontcolor="white"; fillcolor="/greens9/8"]
+  conditions [label=<<FONT POINT-SIZE="10">conditions</FONT>>; fontname="Helvetica"; style="filled"; fontcolor="white"; fillcolor="/blues9/8"]
+  experience [label=<<FONT POINT-SIZE="10">experience and skill</FONT>>; fontname="Helvetica"; style="filled"; fontcolor="white"; fillcolor="/blues9/8"]
+
+  solo [label=<<FONT POINT-SIZE="10">SOLO</FONT>>; fontname="Helvetica"; shape="octagon"; style="filled"; fontcolor="white"; fillcolor="/blues9/8"]
+
+  presoloexam -> knowledge
+  medicalcheck -> medical
+
+  age -> paperwork
+  medical -> paperwork
+  knowledge -> paperwork
+  citizenship -> paperwork
+  paperwork -> spp
+
+  identification -> radioexam
+  radioexam -> radio
+
+  medical -> documents
+  spp -> documents
+  radio -> documents
+
+  dual -> experience
+
+  conditions -> solo
+  experience -> solo
+  documents -> solo
+}

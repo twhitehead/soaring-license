@@ -1,0 +1,32 @@
+digraph solo {
+  label = <<FONT POINT-SIZE="80">Solo to License<BR/></FONT><FONT POINT-SIZE="40">(private pilot license)<BR/><BR/></FONT>>
+  labelloc = t
+
+  dual [label=<<FONT POINT-SIZE="20">DUAL INSTRUCTION (24 months)<BR/></FONT><FONT POINT-SIZE="4"><BR/></FONT>1+hr of dual instruction in last 24 months<BR/>by glider instructor>; fontname="Helvetica"; shape="octagon"; style="filled"; fontcolor="white"; fillcolor="/blues9/8"]
+  solo [label=<<FONT POINT-SIZE="20">SOLO FLIGHTS (24 months)<BR/></FONT><FONT POINT-SIZE="4"><BR/></FONT>2+hrs of solo flight in last 24 months<BR/>including 20 takeoffs and landings<BR/>under supervision of glider instructor>; fontname="Helvetica"; shape="octagon"; style="filled"; fontcolor="white"; fillcolor="/blues9/8"]
+  training75 [label=<<FONT POINT-SIZE="20">75% TRAINING (24 months)<BR/></FONT><FONT POINT-SIZE="4"><BR/></FONT>2.25+hrs of total training in last 24 months<BR/>under supervision of glider instructor<BR/>(includes private pilot license credit)>; fontname="Helvetica"; shape="octagon"; style="filled"; fontcolor="white"; fillcolor="/blues9/8"]
+
+  training100 [label=<<FONT POINT-SIZE="20">100% TRAINING (24 months)<BR/></FONT><FONT POINT-SIZE="4"><BR/></FONT>3+hrs of total training in last 24 months<BR/>including dual and solo training<BR/>under supervision of glider instructor<BR/>(includes private pilot license credit)>; fontname="Helvetica"; shape="octagon"; style="filled"; fontcolor="white"; fillcolor="/blues9/8"]
+  flighttest [label=<<FONT POINT-SIZE="20">FLIGHT TEST (12 months)<BR/></FONT><FONT POINT-SIZE="4"><BR/></FONT>flight and ground test in last<BR/>12 months by glider instructor>; fontname="Helvetica"; shape="octagon"; style="filled"; fontcolor="white"; fillcolor="/reds9/8"]
+
+  ppl [label=<<FONT POINT-SIZE="20">PRIVATE PILOT LICENSE<BR/></FONT><FONT POINT-SIZE="4"><BR/></FONT>current medical and language proficiency<BR/>proof of age and citizenship>; fontname="Helvetica"; style="filled"; fontcolor="white"; fillcolor="/greys9/8"]
+  experience [label=<<FONT POINT-SIZE="20">EXPERIENCE<BR/></FONT><FONT POINT-SIZE="4"><BR/></FONT>personal log book records<BR/>for last 24 months>; fontname="Helvetica"; style="filled"; fontcolor="white"; fillcolor="/greens9/8"]
+  skill [label=<<FONT POINT-SIZE="20">SKILL<BR/></FONT><FONT POINT-SIZE="4"><BR/></FONT>letter from glider instructor<BR/>test endorsement in log book>; fontname="Helvetica"; style="filled"; fontcolor="white"; fillcolor="/greens9/8"]
+
+  paperwork [label=<<FONT POINT-SIZE="20">PAPERWORK<BR/></FONT><FONT POINT-SIZE="4"><BR/></FONT>by authorized person or Transport Canada office>; fontname="Helvetica"; shape="octagon"; style="filled"; fontcolor="white"; fillcolor="/reds9/8"]
+
+  license [label=<<FONT POINT-SIZE="30">LICENSE<BR/></FONT><FONT POINT-SIZE="4"><BR/></FONT>includes medical but not radio certificate<BR/>have to remain current to use>; fontname="Helvetica"; style="filled"; fontcolor="white"; fillcolor="/greens9/8"]
+
+  dual -> training100
+  solo -> training100
+  training100 -> experience
+
+  training75 -> flighttest
+  flighttest -> skill
+
+  experience -> paperwork
+  ppl -> paperwork
+  skill -> paperwork
+
+  paperwork -> license
+}

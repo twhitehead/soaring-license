@@ -1,0 +1,61 @@
+digraph solo {
+  label = <<FONT POINT-SIZE="80">Solo to License<BR/></FONT><FONT POINT-SIZE="40">(no existing pilot license)<BR/><BR/></FONT>>
+  labelloc = t
+
+  training50 [label=<<FONT POINT-SIZE="20">50% TRAINING (24 months)<BR/></FONT><FONT POINT-SIZE="4"><BR/></FONT>3+hrs of total training in last 24 months<BR/>under supervision of glider instructor>; fontname="Helvetica"; shape="octagon"; style="filled"; fontcolor="white"; fillcolor="/blues9/8"]
+
+  medical [label=<<FONT POINT-SIZE="20">MEDICAL CERTIFICATE<BR/></FONT><FONT POINT-SIZE="4"><BR/></FONT>category 1, 3, or 4 certificate<BR/>>; fontname="Helvetica"; style="filled"; fontcolor="white"; fillcolor="/greens9/8"]
+  identification [label=<<FONT POINT-SIZE="20">IDENTIFICATION<BR/></FONT><FONT POINT-SIZE="4"><BR/></FONT>permit, license, or other official document<BR/>with signature and photograph>; fontname="Helvetica"; style="filled"; fontcolor="white"; fillcolor="/greys9/8"]
+  experience50 [label=<<FONT POINT-SIZE="20">EXPERIENCE<BR/></FONT><FONT POINT-SIZE="4"><BR/></FONT>personal log book records<BR/>for last 24 months>; fontname="Helvetica"; style="filled"; fontcolor="white"; fillcolor="/greens9/8"]
+  dual [label=<<FONT POINT-SIZE="20">DUAL INSTRUCTION (24 months)<BR/></FONT><FONT POINT-SIZE="4"><BR/></FONT>1+hr of dual instruction in last 24 months<BR/>by glider instructor>; fontname="Helvetica"; shape="octagon"; style="filled"; fontcolor="white"; fillcolor="/blues9/8"]
+  solo [label=<<FONT POINT-SIZE="20">SOLO FLIGHTS (24 months)<BR/></FONT><FONT POINT-SIZE="4"><BR/></FONT>2+hrs of solo flight in last 24 months<BR/>including 20 takeoffs and landings<BR/>under supervision of glider instructor>; fontname="Helvetica"; shape="octagon"; style="filled"; fontcolor="white"; fillcolor="/blues9/8"]
+  training75 [label=<<FONT POINT-SIZE="20">75% TRAINING (24 months)<BR/></FONT><FONT POINT-SIZE="4"><BR/></FONT>4.5+hrs of total training in last 24 months<BR/>under supervision of glider instructor>; fontname="Helvetica"; shape="octagon"; style="filled"; fontcolor="white"; fillcolor="/blues9/8"]
+
+  languageassesment [label=<<FONT POINT-SIZE="20">LANGUAGE ASSESSMENT<BR/></FONT><FONT POINT-SIZE="4"><BR/></FONT>verbal assessment on speaking, listening,<BR/>and scenario responses in English by<BR/>Transport Canada approved examiner>; fontname="Helvetica"; shape="octagon"; style="filled"; fontcolor="white"; fillcolor="/reds9/8"]
+  exam [label=<<FONT POINT-SIZE="20">GLIDE EXAM (24 months)<BR/></FONT><FONT POINT-SIZE="4"><BR/></FONT>60+% on glide exam in last 24<BR/>months covering ground school<BR/>material by Transport Canada>; fontname="Helvetica"; shape="octagon"; style="filled"; fontcolor="white"; fillcolor="/reds9/8"]
+  study [label=<<FONT POINT-SIZE="20">GROUND SCHOOL<BR/></FONT><FONT POINT-SIZE="4"><BR/></FONT>15+hrs of ground school instruction on<BR/>Canadian Aviation Regulations, aerodynamics<BR/>and theory of flight, meteorology, airframes<BR/>and systems, flight instruments, navigation,<BR/>flight operations, emergency procedures, and<BR/>human factors including pilot decision-making>; fontname="Helvetica"; shape="octagon"; style="filled"; fontcolor="white"; fillcolor="/reds9/8"]
+  training100 [label=<<FONT POINT-SIZE="20">100% TRAINING (24 months)<BR/></FONT><FONT POINT-SIZE="4"><BR/></FONT>6+hrs of total training in last 24 months<BR/>including dual and solo training<BR/>under supervision of glider instructor>; fontname="Helvetica"; shape="octagon"; style="filled"; fontcolor="white"; fillcolor="/blues9/8"]
+  flighttest [label=<<FONT POINT-SIZE="20">FLIGHT TEST (12 months)<BR/></FONT><FONT POINT-SIZE="4"><BR/></FONT>flight and ground test in last<BR/>12 months by glider instructor>; fontname="Helvetica"; shape="octagon"; style="filled"; fontcolor="white"; fillcolor="/reds9/8"]
+
+  language [label=<<FONT POINT-SIZE="20">LANGUAGE PROFICIENCY<BR/></FONT><FONT POINT-SIZE="4"><BR/></FONT>language proficiency exam results>; fontname="Helvetica"; style="filled"; fontcolor="white"; fillcolor="/greens9/8"]
+  knowledge [label=<<FONT POINT-SIZE="20">KNOWLEDGE<BR/></FONT><FONT POINT-SIZE="4"><BR/></FONT>ground school course certificate<BR/>and glide exam results>; fontname="Helvetica"; style="filled"; fontcolor="white"; fillcolor="/greens9/8"]
+  age [label=<<FONT POINT-SIZE="20">AGE (16+)<BR/></FONT><FONT POINT-SIZE="4"><BR/></FONT>birth certificate<BR/>or passport>; fontname="Helvetica"; style="filled"; fontcolor="white"; fillcolor="/greys9/8"]
+  citizenship [label=<<FONT POINT-SIZE="20">CITIZENSHIP<BR/></FONT><FONT POINT-SIZE="4"><BR/></FONT>birth certificate<BR/>or current passport>; fontname="Helvetica"; style="filled"; fontcolor="white"; fillcolor="/greys9/8"]
+  photo [label=<<FONT POINT-SIZE="20">PHOTO<BR/></FONT><FONT POINT-SIZE="4"><BR/></FONT>passport photo>; fontname="Helvetica"; style="filled"; fontcolor="white"; fillcolor="/greys9/8"]
+  experience100 [label=<<FONT POINT-SIZE="20">EXPERIENCE<BR/></FONT><FONT POINT-SIZE="4"><BR/></FONT>personal log book records<BR/>for last 24 months>; fontname="Helvetica"; style="filled"; fontcolor="white"; fillcolor="/greens9/8"]
+  skill [label=<<FONT POINT-SIZE="20">SKILL<BR/></FONT><FONT POINT-SIZE="4"><BR/></FONT>letter from glider instructor<BR/>test endorsement in log book>; fontname="Helvetica"; style="filled"; fontcolor="white"; fillcolor="/greens9/8"]
+
+  paperwork [label=<<FONT POINT-SIZE="20">PAPERWORK<BR/></FONT><FONT POINT-SIZE="4"><BR/></FONT>by authorized person or Transport Canada office>; fontname="Helvetica"; shape="octagon"; style="filled"; fontcolor="white"; fillcolor="/reds9/8"]
+
+  license [label=<<FONT POINT-SIZE="30">LICENSE<BR/></FONT><FONT POINT-SIZE="4"><BR/></FONT>includes medical but not radio certificate<BR/>have to remain current to use>; fontname="Helvetica"; style="filled"; fontcolor="white"; fillcolor="/greens9/8"]
+
+  training50 -> experience50
+  experience50 -> exam
+  identification -> exam
+  medical -> exam
+  
+  exam -> knowledge
+  study -> knowledge
+
+  dual -> training100
+  solo -> training100
+  training100 -> experience100
+
+  training75 -> flighttest
+  flighttest -> skill
+
+  medical -> languageassesment
+  identification -> languageassesment
+  languageassesment -> language
+
+  age -> paperwork
+  medical -> paperwork
+  knowledge -> paperwork
+  experience100 -> paperwork
+  citizenship -> paperwork
+  photo -> paperwork
+  skill -> paperwork
+  language -> paperwork
+
+  paperwork -> license
+}

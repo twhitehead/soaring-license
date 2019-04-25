@@ -1,0 +1,60 @@
+digraph solo {
+  graph [nodesep = 0.1, ranksep = 0.2, rotate = 90, margin = 0]
+
+  training50 [label=<<FONT POINT-SIZE="10">50% training (24 months)</FONT>>; fontname="Helvetica"; shape="octagon"; style="filled"; fontcolor="white"; fillcolor="/blues9/8"]
+
+  medical [label=<<FONT POINT-SIZE="10">medical certificate</FONT>>; fontname="Helvetica"; style="filled"; fontcolor="white"; fillcolor="/greens9/8"]
+  identification [label=<<FONT POINT-SIZE="10">identification</FONT>>; fontname="Helvetica"; style="filled"; fontcolor="white"; fillcolor="/greys9/8"]
+  experience50 [label=<<FONT POINT-SIZE="10">experience (50%)</FONT>>; fontname="Helvetica"; style="filled"; fontcolor="white"; fillcolor="/greens9/8"]
+  dual [label=<<FONT POINT-SIZE="10">dual instruction (24 months)</FONT>>; fontname="Helvetica"; shape="octagon"; style="filled"; fontcolor="white"; fillcolor="/blues9/8"]
+  solo [label=<<FONT POINT-SIZE="10">solo flights (24 months)</FONT>>; fontname="Helvetica"; shape="octagon"; style="filled"; fontcolor="white"; fillcolor="/blues9/8"]
+  training75 [label=<<FONT POINT-SIZE="10">75% TRAINING (24 months)</FONT>>; fontname="Helvetica"; shape="octagon"; style="filled"; fontcolor="white"; fillcolor="/blues9/8"]
+
+  languageassesment [label=<<FONT POINT-SIZE="10">language assessment</FONT>>; fontname="Helvetica"; shape="octagon"; style="filled"; fontcolor="white"; fillcolor="/reds9/8"]
+  exam [label=<<FONT POINT-SIZE="10">glide exam (24 months)</FONT>>; fontname="Helvetica"; shape="octagon"; style="filled"; fontcolor="white"; fillcolor="/reds9/8"]
+  study [label=<<FONT POINT-SIZE="10">ground school</FONT>>; fontname="Helvetica"; shape="octagon"; style="filled"; fontcolor="white"; fillcolor="/reds9/8"]
+  training100 [label=<<FONT POINT-SIZE="10">100% training (24 months)</FONT>>; fontname="Helvetica"; shape="octagon"; style="filled"; fontcolor="white"; fillcolor="/blues9/8"]
+  flighttest [label=<<FONT POINT-SIZE="10">flight test (12 months) (75%)</FONT>>; fontname="Helvetica"; shape="octagon"; style="filled"; fontcolor="white"; fillcolor="/reds9/8"]
+
+  language [label=<<FONT POINT-SIZE="10">language proficiency</FONT>>; fontname="Helvetica"; style="filled"; fontcolor="white"; fillcolor="/greens9/8"]
+  knowledge [label=<<FONT POINT-SIZE="10">knowledge</FONT>>; fontname="Helvetica"; style="filled"; fontcolor="white"; fillcolor="/greens9/8"]
+  age [label=<<FONT POINT-SIZE="10">age (16+)</FONT>>; fontname="Helvetica"; style="filled"; fontcolor="white"; fillcolor="/greys9/8"]
+  citizenship [label=<<FONT POINT-SIZE="10">citizenship</FONT>>; fontname="Helvetica"; style="filled"; fontcolor="white"; fillcolor="/greys9/8"]
+  photo [label=<<FONT POINT-SIZE="10">photo</FONT>>; fontname="Helvetica"; style="filled"; fontcolor="white"; fillcolor="/greys9/8"]
+  experience100 [label=<<FONT POINT-SIZE="10">experience</FONT>>; fontname="Helvetica"; style="filled"; fontcolor="white"; fillcolor="/greens9/8"]
+  skill [label=<<FONT POINT-SIZE="10">skill</FONT>>; fontname="Helvetica"; style="filled"; fontcolor="white"; fillcolor="/greens9/8"]
+
+  paperwork [label=<<FONT POINT-SIZE="10">paperwork</FONT>>; fontname="Helvetica"; shape="octagon"; style="filled"; fontcolor="white"; fillcolor="/reds9/8"]
+
+  license [label=<<FONT POINT-SIZE="10">license</FONT>>; fontname="Helvetica"; style="filled"; fontcolor="white"; fillcolor="/greens9/8"]
+
+  training50 -> experience50
+  experience50 -> exam
+  identification -> exam
+  medical -> exam
+  
+  exam -> knowledge
+  study -> knowledge
+
+  dual -> training100
+  solo -> training100
+  training100 -> experience100
+
+  training75 -> flighttest
+  flighttest -> skill
+
+  medical -> languageassesment
+  identification -> languageassesment
+  languageassesment -> language
+
+  age -> paperwork
+  medical -> paperwork
+  knowledge -> paperwork
+  experience100 -> paperwork
+  citizenship -> paperwork
+  photo -> paperwork
+  skill -> paperwork
+  language -> paperwork
+
+  paperwork -> license
+}
